@@ -1,0 +1,16 @@
+//Given the array nums consisting of 2n elements in the form [x1,x2,...,xn,y1,y2,...,yn].
+//Return the array in the form [x1,y1,x2,y2,...,xn,yn].
+
+//Java
+class Solution {
+    public int[] shuffle(int[] nums, int n) {
+        int[] A = new int[n*2];
+        int i = 0;
+        while(i < n) {
+            A[i*2] = nums[i];
+            A[i*2+1] = nums[i+n];
+            i = i + 1;
+        }
+        return A;
+    }
+}
