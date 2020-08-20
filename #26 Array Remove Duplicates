@@ -1,0 +1,15 @@
+//Remove Duplicates from Sorted Array
+//Python version
+//Note list(dict.fromkeys(???))  ====> remove duplicate
+class Solution(object):
+    def removeDuplicates(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        s = 0;
+        for i in range(len(nums)) :
+            if (nums[s] != nums[i]):
+                s+=1
+                nums[s] = nums[i]
+        return len(nums[:s+1])
